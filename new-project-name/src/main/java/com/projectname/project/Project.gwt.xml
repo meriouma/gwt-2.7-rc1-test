@@ -18,6 +18,8 @@
 
     <set-configuration-property name="gwtp.prebootstrapper"
                                 value="com.projectname.project.client.PreBootstrapperImpl"/>
+    <set-configuration-property name="gwtp.bootstrapper"
+                                value="com.projectname.project.client.MyBootstrapper"/>
 
     <!-- Specify the paths for translatable code                    -->
     <source path='client'/>
