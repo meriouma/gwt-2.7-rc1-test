@@ -1,0 +1,9 @@
+<ui:UiBinder xmlns:ui='urn:ui:com.google.gwt.uibinder'
+             xmlns:g='urn:import:com.google.gwt.user.client.ui'>
+
+    <ui:import field="com.projectname.project.client.place.NameTokens.PAGE1"/>
+
+    <g:HTMLPanel>
+        <g:Hyperlink targetHistoryToken="{PAGE1}" text="Go to PAGE1"/>
+    </g:HTMLPanel>
+</ui:UiBinder>
