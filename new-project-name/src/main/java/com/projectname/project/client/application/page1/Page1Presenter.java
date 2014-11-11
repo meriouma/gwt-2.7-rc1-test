@@ -9,7 +9,6 @@ import com.gwtplatform.mvp.client.View;
 import com.gwtplatform.mvp.client.annotations.NameToken;
 import com.gwtplatform.mvp.client.annotations.NoGatekeeper;
 import com.gwtplatform.mvp.client.annotations.ProxyStandard;
-import com.gwtplatform.mvp.client.proxy.PlaceManager;
 import com.gwtplatform.mvp.client.proxy.ProxyPlace;
 import com.projectname.project.client.application.ApplicationPresenter;
 import com.projectname.project.client.place.NameTokens;
@@ -25,7 +24,6 @@ public class Page1Presenter extends Presenter<Page1Presenter.MyView, Page1Presen
     interface MyProxy extends ProxyPlace<Page1Presenter> {
     }
 
-    private final PlaceManager placeManager;
     private final RestDispatchAsync dispatcher;
     private final SomeService someService;
 
@@ -33,12 +31,10 @@ public class Page1Presenter extends Presenter<Page1Presenter.MyView, Page1Presen
     Page1Presenter(EventBus eventBus,
                    MyView view,
                    MyProxy proxy,
-                   PlaceManager placeManager,
                    RestDispatchAsync dispatcher,
                    SomeService someService) {
         super(eventBus, view, proxy, ApplicationPresenter.SLOT_MAIN_CONTENT);
 
-        this.placeManager = placeManager;
         this.dispatcher = dispatcher;
         this.someService = someService;
     }

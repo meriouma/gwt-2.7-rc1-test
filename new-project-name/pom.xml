@@ -94,6 +94,15 @@
           </execution>
         </executions>
       </plugin>
+
+      <plugin>
+        <groupId>org.mortbay.jetty</groupId>
+        <artifactId>jetty-maven-plugin</artifactId>
+        <version>8.1.9.v20130131</version>
+        <configuration>
+          <webAppSourceDirectory>${webappDirectory}</webAppSourceDirectory>
+        </configuration>
+      </plugin>
     </plugins>
   </build>
 
@@ -138,13 +147,6 @@
       <groupId>com.gwtplatform</groupId>
       <artifactId>gwtp-dispatch-rest-shared</artifactId>
       <version>${gwtp.version}</version>
-    </dependency>
-
-    <!-- MGWT -->
-    <dependency>
-      <groupId>com.googlecode.mgwt</groupId>
-      <artifactId>mgwt</artifactId>
-      <version>${mgwt.version}</version>
     </dependency>
 
     <!-- DI -->

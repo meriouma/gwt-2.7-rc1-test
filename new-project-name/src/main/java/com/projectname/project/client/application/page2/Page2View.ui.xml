@@ -3,7 +3,14 @@
 
     <ui:import field="com.projectname.project.client.place.NameTokens.PAGE1"/>
 
-    <g:HTMLPanel>
+    <ui:style>
+        .bg {
+            height: 100%;
+            background: #000;
+        }
+    </ui:style>
+
+    <g:HTMLPanel styleName="{style.bg}">
         <g:Hyperlink targetHistoryToken="{PAGE1}" text="Go to PAGE1"/>
     </g:HTMLPanel>
 </ui:UiBinder>
